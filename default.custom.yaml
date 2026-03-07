@@ -1,0 +1,12 @@
+patch:
+  schema_list:
+    - schema: double_pinyin
+    - schema: rime_mint
+    - schema: double_pinyin_flypy
+    - schema: rime_mint_flypy
+    - schema: terra_pinyin
+    - schema: wubi98_mint
+    - schema: wubi86_jidian
+    - schema: t9
+  initial_options:
+    transcription: 0

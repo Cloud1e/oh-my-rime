@@ -1,4 +1,5 @@
-# 本机自定义：横向候选（与 Mac squirrel 保持一致）
 patch:
   "style/horizontal": true
   "style/candidate_list_layout": linear
+  "style/color_scheme": mint_dark_blue
+  "style/color_scheme_dark": mint_dark_blue
