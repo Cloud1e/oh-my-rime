@@ -1,0 +1,14 @@
+# 本机自定义：双拼原始显示、关闭英文降权、英文选词后自动加空格
+patch:
+  # 候选栏显示原始双拼（如 vfdejwde），不转全拼
+  "translator/preedit_format": []
+  # 增加英文后自动空格；去掉 reduce_english_filter 使中英混输时英文更靠前
+  "engine/filters":
+    - lua_filter@*corrector_filter
+    - lua_filter@*super_preedit
+    - lua_filter@*autocap_filter
+    - lua_filter@*append_space_after_eng
+    - lua_filter@*auxCode_filter
+    - simplifier@emoji_suggestion
+    - simplifier@transcription_cc
+    - uniquifier

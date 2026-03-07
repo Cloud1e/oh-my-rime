@@ -1,0 +1,7 @@
+# 本机自定义：横向候选、分页提示、暗色皮肤（与 weasel 保持一致）
+patch:
+  "style/horizontal": true
+  "style/candidate_list_layout": linear
+  "style/show_paging": true
+  "style/color_scheme": mojave_dark
+  "style/color_scheme_dark": mojave_dark
