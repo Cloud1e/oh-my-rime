@@ -17,6 +17,10 @@ patch:
     - ascii_punct
     - transcription
     - emoji_suggestion
+  # Don't let Shift trigger temporary ASCII mode
+  "ascii_composer/switch_key":
+    Shift_L: noop
+    Shift_R: noop
   # Disable full-width/half-width toggle hotkeys to avoid mis-touch
   "key_binder/bindings":
     - { when: composing, accept: Control+p, send: Up }
