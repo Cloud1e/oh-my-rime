@@ -1,4 +1,6 @@
 patch:
+  # Make ASCII mode affect all windows/apps (global)
+  global_ascii: true
   "style/horizontal": true
   "style/candidate_list_layout": linear
   "style/show_paging": true
