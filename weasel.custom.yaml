@@ -3,3 +3,5 @@ patch:
   "style/candidate_list_layout": linear
   "style/color_scheme": mint_dark_blue
   "style/color_scheme_dark": mint_dark_blue
+  # Make ASCII mode affect all windows/apps (global)
+  global_ascii: true
