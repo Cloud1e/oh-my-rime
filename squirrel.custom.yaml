@@ -1,6 +1,14 @@
 patch:
   # Make ASCII mode affect all windows/apps (global)
   global_ascii: true
+  # Per-app default input mode (ascii_mode: true = English)
+  app_options:
+    com.google.Chrome:
+      ascii_mode: true
+    com.google.Chrome.canary:
+      ascii_mode: true
+    org.chromium.Chromium:
+      ascii_mode: true
   "style/horizontal": true
   "style/candidate_list_layout": linear
   "style/show_paging": true
