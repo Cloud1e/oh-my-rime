@@ -9,6 +9,11 @@ patch:
       ascii_mode: true
     org.chromium.Chromium:
       ascii_mode: true
+    # Arc browser
+    company.thebrowser.Browser:
+      ascii_mode: true
+    company.thebrowser.BrowserBeta:
+      ascii_mode: true
   "style/horizontal": true
   "style/candidate_list_layout": linear
   "style/show_paging": true
