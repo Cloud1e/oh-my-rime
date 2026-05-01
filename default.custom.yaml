@@ -18,15 +18,14 @@ patch:
     - ascii_punct
     - transcription
     - emoji_suggestion
-  # Caps Lock: toggle Chinese/English (persistent ascii_mode).
-  # Shift: temporary English in composition (inline_ascii); IME returns to Chinese after commit.
+  # Shift: temporary English while composing (inline_ascii); use Globe/F13 for real mode toggle.
+  # macOS Globe often never reaches the IME — map Globe -> F13 in Karabiner-Elements, then F13 toggles here.
   "ascii_composer/switch_key":
     Caps_Lock: commit_code
     Control_L: noop
     Control_R: noop
     Shift_L: inline_ascii
     Shift_R: inline_ascii
-  "ascii_composer/good_old_caps_lock": true
   # Disable full-width/half-width toggle hotkeys to avoid mis-touch
   "key_binder/bindings":
     - { when: composing, accept: Control+p, send: Up }
@@ -49,6 +48,8 @@ patch:
     - { when: has_menu, accept: period, send: Page_Down }
     - { when: predicting, accept: comma, send: comma }
     - { when: predicting, accept: period, send: period }
+    - { when: always, accept: F13, toggle: ascii_mode }
+    - { when: always, accept: Eisu_toggle, toggle: ascii_mode }
     - { when: always, accept: Control+Shift+1, select: .next }
     - { when: always, accept: Control+Shift+2, toggle: ascii_mode }
     # removed: Control+Shift+3 toggle full_shape
