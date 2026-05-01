@@ -9,6 +9,7 @@ patch:
     - schema: wubi86_jidian
     - schema: t9
   initial_options:
+    ascii_mode: 1
     transcription: 0
   # Remember last Chinese/English mode (avoid auto reverting)
   "switcher/save_options":
@@ -17,6 +18,15 @@ patch:
     - ascii_punct
     - transcription
     - emoji_suggestion
+  # Caps Lock: toggle Chinese/English (persistent ascii_mode).
+  # Shift: temporary English in composition (inline_ascii); IME returns to Chinese after commit.
+  "ascii_composer/switch_key":
+    Caps_Lock: commit_code
+    Control_L: noop
+    Control_R: noop
+    Shift_L: inline_ascii
+    Shift_R: inline_ascii
+  "ascii_composer/good_old_caps_lock": true
   # Disable full-width/half-width toggle hotkeys to avoid mis-touch
   "key_binder/bindings":
     - { when: composing, accept: Control+p, send: Up }
